@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<!--
+		- created by Andrew Wooldridge
+		- http://andrewwooldridge.com
+		- version 1.0
+		- last edited Nov 11, 2009
+		- MIT licensed
+		-->
+		<title>Click Me to Get Points</title>
+		
+		<script type="text/javascript" src="http://yui.yahooapis.com/3.0.0/build/yui/yui-min.js"></script>
+		<script>
+			YUI().use("node",function(Y){
+				Y.on("domready", function(){
+					var pts = 0;
+					
+					//Y.log("hello world");
+					
+
+					
+					var btn = Y.one("#btn")
+					btn.on("click",function(){
+						Y.log("button clicked!")
+						pts++;
+						Y.one("#pts").set("innerHTML",pts)
+					})
+					
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="btn">Click Me to Get Points</button>
+		<div id="pts">0</div>
+		
+	</body>
+</html>
